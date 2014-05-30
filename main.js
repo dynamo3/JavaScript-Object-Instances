@@ -37,7 +37,7 @@ var monopoly = new Game({
 // Make a Cart Object that has no default settings
 var Cart = function() {
 
-	this.items = {}
+	this.items = {};
 
 	// Make a method here called addItem(item, qty) that takes
 	// two arguments (item and quantity). Calling this method
