@@ -157,6 +157,39 @@ console.log(grassHopper);
 //      (title, startTime, participantCount=0)
 // 2. Add a method called add(qty)
 //      Update the number of participants
+
+var Game = function(settings){
+
+    this.settings = $.extend({
+        title: "Unknown",
+        startTime: 0,
+        participantCount:0
+    }, settings);
+
+    this.add = function(qty){
+        this.settings.participantCount = this.settings.participantCount + qty;
+    };
+
+};
+
+//
+// Instatiate a new Monopoly Game and pass settings for
+// (title and anything else you want)
+// 1. Call add(2)
+// 2. Console out Monopoly
+
+var mygame = new Game({title:'Monopoly'});
+mygame.add(2);
+console.log(mygame);
+
+
+
+
+// KATA 3. 
+// 1. Make a  Object that has default settings 
+//      (title, startTime, participantCount=0)
+// 2. Add a method called add(qty)
+//      Update the number of participants
 //
 // Instatiate a new Monopoly Game and pass settings for
 // (title and anything else you want)
@@ -166,14 +199,45 @@ console.log(grassHopper);
 
 
 
+// KATA 4. 
+// 1. Make a Plant Object that has default settings 
+//      (name, color, size=0)
+// 2. Add a method called water(qty)
+//      Update the size of plant
+//
+// Instatiate a new tree Plant and pass settings for
+// (name and anything else you want)
+// 1. Call water(2)
+// 2. Console out the tree
 
 
 
 
+// KATA 5. 
+// 1. Make a Character Object that has default settings 
+//      (name, experience=0, life=100, strength=5, location=[0,0])
+// 2. Add a method called move(x,y)
+//      Update the location of plant
+// 3. Add a method called attack(enemy)
+//      Generate a random number between 1-10
+//      if the number is <=5 (You win)
+//          update experience by 1
+//          update enemy experience by -1
+//      if the numer is > 5 (You lose)
+//          update your experience by -1
+//          update your life by -1    
+//          update enemy experience by 1
+//
+// Instatiate a new zombie Character and pass settings for
+// (name and anything else you want)
+// 1. Call move(1,2)
+// 2. Console out the zombie
 
-
-
-
+// Instatiate a new farmer Character and pass settings for
+// (name and anything else you want)
+// 1. Call move(1,2)
+// 2. Call attack(zombie)
+// 3. Console out the farmer
 
 
 
